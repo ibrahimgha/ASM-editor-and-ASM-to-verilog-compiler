@@ -1405,6 +1405,10 @@ function updateJSON() {
 function nextNode(node_index, path) {//0 for false and 1 for true
   for (i in JSON_extract['links']) {
     if (JSON_extract['links'][i].nodeA == node_index && JSON_extract['links'][i].link_type == path) {
+      if (JSON_extract['links'][i].nodeB < node_index) {
+	alert("Infinite loop prevented");
+	return -1;
+      }
       return JSON_extract['links'][i].nodeB;
     }
   }

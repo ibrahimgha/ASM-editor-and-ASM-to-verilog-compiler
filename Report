@@ -1,0 +1,20 @@
+Ibrahim ElGharbawi
+900113235
+Digital Logic Design 2
+Project 1 report
+
+Javascript Based ASM to Verilog converter
+
+Project Description - Features:
+
+	The project is based on an html file (home.html) in which all the operations occur. No backend was implemented since all the functions were written in Javascript. The project flow goes as follows: The user draws his ASM chart and clicks the “ToVerilog” button. Verilog code gets generated in a textbox below the canvas. The user is expected to write the operations in the boxes instead of the state names. The user then has an option to generate a testbench for the produces code by pressing the “Generate Tesbench” button. All the data is stored in Json format and a saving feature could easily be added.
+	
+	
+Challenges:
+
+	The main challenge was to derive a functional algorithm that, given ASM nodes and links, would generate Verilog code. The second most challenging task was to understand what the structure of the already existing FSM was and adapt it for ASM usage. 
+	
+	
+Limitations:
+
+	Some charts might cause the algorithm to get stuck in an infinite loop, a break condition was implemented to prevent this problem. The generated Verilog code might need some modifications before an accurate test bench can could get generated. Some of the generated testbenches need minor modifications before they could be run. 
